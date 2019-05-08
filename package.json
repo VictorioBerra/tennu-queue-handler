@@ -1,5 +1,5 @@
 {
-  "name": "memoryqueue",
+  "name": "tennu-queue-handler",
   "version": "1.0.0",
   "description": "A very basic in-memory queue of tennu IRC messages.",
   "main": "queue-handler.js",
@@ -14,6 +14,10 @@
     "queue"
   ],
   "author": "Victorio Berra",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/VictorioBerra/tennu-queue-handler.git"
+  },
   "license": "ISC",
   "dependencies": {
     "bluebird": "^3.5.4",
@@ -21,12 +25,7 @@
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsdoc": "^4.8.3",
-    "eslint-plugin-node": "^9.0.1",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0",
     "mocha": "^6.1.4",
     "should": "^13.2.3"
   }
