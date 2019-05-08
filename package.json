@@ -1,7 +1,7 @@
 {
   "name": "memoryqueue",
   "version": "1.0.0",
-  "description": "Adds an in-memory queue of messages for searching purposes.",
+  "description": "A very basic in-memory queue of tennu IRC messages.",
   "main": "queue-handler.js",
   "scripts": {
     "test": "mocha",
@@ -23,9 +23,11 @@
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsdoc": "^4.8.3",
     "eslint-plugin-node": "^9.0.1",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
-    "mocha": "^6.1.4"
+    "mocha": "^6.1.4",
+    "should": "^13.2.3"
   }
 }
