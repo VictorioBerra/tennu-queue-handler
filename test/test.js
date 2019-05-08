@@ -7,6 +7,9 @@ const limit = 5;
 const queue = require('../queue-handler')(limit);
 var should = require('should');
 
+// Little wrapper for making sure an empty promise is resolved as undefined.
+let shouldBeUndefined = r => should(r).be.undefined();
+
 describe('Queue handler', function() {
 
     // Clear queue
@@ -58,7 +61,7 @@ describe('Queue handler', function() {
 
             queue.update(message, channel, nickname);
 
-            queue.getRandomMessage(message, channel, { avoidMessagesStartingWith: 'ra/'}).should.eventually.be.undefined;
+            queue.getRandomMessage(message, channel, { avoidMessagesStartingWith: 'ra/'}).then(shouldBeUndefined);
 
         });
     });
@@ -88,7 +91,7 @@ describe('Queue handler', function() {
 
             queue.update(message, channel, nickname);
 
-            queue.findCorrectable(message, channel).should.eventually.should.eventually.be.undefined;
+            queue.findCorrectable(message, channel).then(shouldBeUndefined);
 
         });
         
@@ -99,7 +102,7 @@ describe('Queue handler', function() {
 
             queue.update(message, channel, nickname);
 
-            queue.findCorrectable(message, channel, { avoidMessagesStartingWith: 'r/'}).should.eventually.be.undefined;
+            queue.findCorrectable(message, channel, { avoidMessagesStartingWith: 'r/'}).then(shouldBeUndefined);
 
         });
         
@@ -123,7 +126,7 @@ describe('Queue handler', function() {
             queue.update(message + ' 1', channel, nickname);
             queue.update(message + ' 2', channel, nickname);
 
-            queue.findCorrectable(message, '#mars', { avoidMessagesStartingWith: 'r/'}).should.eventually.be.undefined;
+            queue.findCorrectable(message, '#mars', { avoidMessagesStartingWith: 'r/'}).then(shouldBeUndefined);
 
         });
     });
