@@ -1,0 +1,31 @@
+{
+  "name": "memoryqueue",
+  "version": "1.0.0",
+  "description": "Adds an in-memory queue of messages for searching purposes.",
+  "main": "queue-handler.js",
+  "scripts": {
+    "test": "mocha",
+    "postversion": "git push && git push --tags && npm publish",
+    "pretest": "eslint ."
+  },
+  "keywords": [
+    "tennu",
+    "irc",
+    "queue"
+  ],
+  "author": "Victorio Berra",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.4",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.1.4"
+  }
+}
